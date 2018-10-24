@@ -3,6 +3,7 @@ package com.coupon.offer.model;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 
 public class User implements Serializable {
 
@@ -13,6 +14,7 @@ public class User implements Serializable {
 	private String address;
 	private Date birthDate;
 	private BigDecimal credit;
+	private List<Coupon> coupons;
 
 	public String getUserName() {
 		return userName;
@@ -70,6 +72,14 @@ public class User implements Serializable {
 		this.credit = credit;
 	}
 
+	public void setCoupons(List<Coupon> coupons) {
+		this.coupons = coupons;
+	}
+	
+	public List<Coupon> getCoupons() {
+		return coupons;
+	}
+	
 	@Override
 	public String toString() {
 		return "User [userName=" + userName + ", email=" + email + ", phoneNumber=" + phoneNumber

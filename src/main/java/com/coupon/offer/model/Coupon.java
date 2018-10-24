@@ -2,6 +2,7 @@ package com.coupon.offer.model;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 public class Coupon implements Serializable {
 
@@ -9,6 +10,8 @@ public class Coupon implements Serializable {
 	private String code;
 	private Date createDate;
 	private Date expireDate;
+	private Product product;
+	private List<User> users;
 
 	public Integer getCouponId() {
 		return couponId;
@@ -40,6 +43,22 @@ public class Coupon implements Serializable {
 
 	public void setExpireDate(Date expireDate) {
 		this.expireDate = expireDate;
+	}
+
+	public Product getProduct() {
+		return product;
+	}
+
+	public void setProduct(Product product) {
+		this.product = product;
+	}
+
+	public List<User> getUsers() {
+		return users;
+	}
+
+	public void setUsers(List<User> users) {
+		this.users = users;
 	}
 
 	@Override
